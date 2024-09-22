@@ -32,7 +32,7 @@ public class Order {
     @JoinColumn(name = "delivery_id")
     private Delivery delivery;
 
-    private LocalDateTime orderTime;
+    private LocalDateTime orderDate;
 
     private OrderStatus status;
 
@@ -61,7 +61,7 @@ public class Order {
             order.addOrderItem(orderItem);
         }
         order.setStatus(OrderStatus.ORDER);
-        order.setOrderTime(LocalDateTime.now());
+        order.setOrderDate(LocalDateTime.now());
         return order;
     }
 
